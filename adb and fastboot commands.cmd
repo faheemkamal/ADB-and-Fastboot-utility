@@ -1,24 +1,7 @@
 :: (C) Faheem Kamal 2016 (Team Revior)
 
-
-ECHO WARNING!! Make sure you changed the adb location in this utility by editing it in notepad and changing the location to the location of ADB in your computer. The default location is set to c:\adb currently.
-
-
-
-
-
-
-
-
 :: Note - Change location in the below lines to point to your adb in your computer
-
 cd /d %~dp0
-
-
-
-
-
-
 
 cls
 ECHO WARNING!! The utility is STUCK! simply restart debugging by turning it off and on in developer options and start this utility again. This is due to incomplete logging permissions in the recent roms init file.
