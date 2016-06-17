@@ -1,4 +1,4 @@
-:: (C) Faheem Kamal 2016
+:: (C) Faheem Kamal 2016 (Team Revior)
 
 
 ECHO WARNING!! Make sure you changed the adb location in this utility by editing it in notepad and changing the location to the location of ADB in your computer. The default location is set to c:\adb currently.
