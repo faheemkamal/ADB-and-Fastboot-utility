@@ -12,7 +12,7 @@ ECHO WARNING!! Make sure you changed the adb location in this utility by editing
 
 :: Note - Change location in the below lines to point to your adb in your computer
 
-cd c:\adb
+cd /d %~dp0
 
 
 
