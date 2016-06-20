@@ -3,10 +3,23 @@
 :: Note - Change location in the below lines to point to your adb in your computer
 cd /d %~dp0
 
+@ECHO OFF
+
 cls
-ECHO WARNING!! The utility is STUCK! simply restart debugging by turning it off and on in developer options and start this utility again. This is due to incomplete logging permissions in the recent roms init file.
+ECHO WARNING!! If this utility stops responding for more than 1 minute, simply restart debugging by turning it off and on in developer options and start this utility again. This is due to incomplete logging permissions in the recent roms init file.
+
+@ECHO ON
+
+:: adb shell su mount -o rw,remount - /system
 
 adb root
+
+adb kill-server
+
+adb start-server
+
+:: adb remount
+
 
 @ECHO OFF
 
@@ -56,6 +69,7 @@ ECHO Dump everything at once
 adb shell dmesg > logs-dump-dmsg.txt
 adb logcat -b radio -v time -d > logs-dump-logcat_radio.log
 adb logcat -v time -d > logs-dump-logcat.log
+:: adb shell su dmesg | grep 'avc: ' >  logs-denials-sepolicy.txt
 GOTO Begin
 
 :Start-continous-logging
